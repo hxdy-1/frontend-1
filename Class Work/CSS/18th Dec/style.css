@@ -1,0 +1,58 @@
+body{
+    background-color: gray;
+}
+
+a{
+    border: 2px solid black;
+    float: right;
+    
+}
+
+.first{
+    background-color: lightgreen;
+    /* color:rgb(104, 107, 110) */
+
+}
+
+.second{
+    background-color: blanchedalmond;
+
+}
+
+.third{
+    background-color: green;
+    /* color:rgb(104, 107, 110) */
+}
+
+.fourth{
+    background-color: rgb(104, 107, 110);
+    /* color:rgb(150, 125, 244) */
+}
+
+.img1, .img3{
+    float: right;
+}
+
+.img2, .img4{
+    float: left;
+}
+
+/* .first, .third, .fourth{
+    color: rgb(150, 125, 244);
+} */
+
+.first-div{
+    /* display: flex; */
+    border: 5px solid red;
+    height: 40px;
+    /* padding-bottom: 0px; */
+}
+
+main p{
+    color: rgb(150, 125, 244);
+}
+
+.second p{
+    background-color: blanchedalmond;
+    color: black;
+}
