@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 232, 232);
+}
+
+.main{
+    border: 5px double red;
+    height: 170px;
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.container{
+    border: 5px double red;
+    margin: 8px 70px;
+    padding: 20px;
+}
+
+.btn{
+    margin: 20px;
+    padding: 5px 10px;
+    /* border: 2px solid red; */
+}
+
+button{
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.btn-1, .btn-2{
+    border: none;
+    background-color: lightgray;
+}
+
+.btn-1{
+    color: rgb(92, 173, 175)
+}
+
+.btn-2{
+    color: white;
+    float: right;
+}
