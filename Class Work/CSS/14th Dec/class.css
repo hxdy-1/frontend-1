@@ -1,0 +1,20 @@
+.link{
+    display: inline-block;
+    width: 400px;
+}
+
+.imgh{
+    float: left;
+}
+.img1{
+    float: right ;
+}
+.img2{
+    float: left;
+}
+.img3{
+    float: right;
+}
+.section{
+    background-color: lightpink;
+}
