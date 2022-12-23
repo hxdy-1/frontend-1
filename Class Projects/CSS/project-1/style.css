@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;1,100;1,200;1,300;1,600&display=swap');
+
+.header {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: "Aclonica";
+    /* padding: .1em; */
+    /* box-sizing: border-box; */
+    /* font-size: 2rem; */
+    /* padding: 0.1em; */
+    /* margin: 0; */
+    /* margin-top: -1rem; */
+    /* margin: auto; */
+    /* font-size: 32px; */
+    margin: -1rem auto 0;
+
+/* a{
+    text-decoration: none;
+    color: white;
+}    */
+
+}
+
+.nav {
+    /* display: flex; */
+    justify-content: space-between;
+    margin-top: -22px;
+
+}
+
+.span1 {
+    display: inline-block;
+    background-color: red;
+    width: 50%
+}
+
+.span2 {
+    display: inline-block;
+    width: 50%;
+    background-color: lightblue;
+    /* float: right; */
+}
+
+ul {
+    color: white;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Montserrat";
+    /* float: right; */
+
+}
+
+ul > li > span {
+    text-decoration: underline yellow 1.5px;
+}
+
+.hero {
+    display: flex;
+}
+
+.left {
+    font-family: "Montserrat";
+    background-color: pink;
+    width: 49.56%;
+    height: 22rem;
+    margin-right: 10px;
+    /* font-style: italic; */
+}
+
+.right {
+    font-family: "Montserrat";
+    background-color: burlywood;
+    width: 50%;
+    height: 22rem;
+    /* font-style: italic; */
+    /* margin-left: 3px; */
+}
+
+/* .shadow{
+    background-color: white;
+    border: 1px solid black;
+
+} */
+
+.font-style{
+    font-style: italic;
+}
+
+.center {
+    font-family: "Aclonica";
+    background-color: lightgray;
+    text-align: center;
+    margin: auto;
+    width: 24em;
+
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    /* padding: 1px;   */
+}
+
+footer {
+    margin-top: -16px;
+}
+
+.footer > p > span {
+    text-decoration: underline yellow 1.5px;
+}
