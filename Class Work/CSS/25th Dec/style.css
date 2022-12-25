@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.container {
+    margin: 15rem auto;
+    padding: 2.5em;
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+}
+
+.main {
+    height: 10rem;
+    width: 10rem;
+    background-color: red;
+}
+
+.container:hover .main{
+    border: 5px solid black;
+}
