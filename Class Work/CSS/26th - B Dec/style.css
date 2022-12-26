@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    /* margin: auto; */
+    padding: 20em;
+}
+
+.container{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 15rem;
+    margin: auto;
+    padding: 1em;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+/* 
+p{
+} */
+
+.after{
+    display: none;
+}
+
+.container:hover {
+    background-color: white;
+    color: black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.container:active {
+    border: 5px double black;
+    /* content: "Im the focused content" */
+}
+
+.container:active .after{
+    display: inline;
+}
+
+.container:active .before{
+    display: none;
+}
+
+/* .container::before{
+    content: "Im the actual content";
+}
+
+.container::after{
+    content: "Im the focused content";
+} */

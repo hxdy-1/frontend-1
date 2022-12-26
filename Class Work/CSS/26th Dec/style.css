@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.container {
+    margin: 15rem auto;
+    padding: .5em;
+    /* height: 15rem; */
+    width: fit-content;
+    background-color: white;
+}
+
+.main {
+    display: inline-block;
+    margin: 1rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: red;
+}
+
+.box2 {
+    display: none;
+    margin: 1rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: green;
+}
+
+.container:hover .main {
+    /* display: inline-block; */
+    border: 5px solid black;
+}
+
+.container:hover .box2{
+    display: inline-block;
+}
