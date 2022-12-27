@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+    margin-left: 15rem;
+    margin-top: 5rem;
+
+}
+
+
+.switch {
+    display: inline-block;
+    margin-bottom: -2.6rem;
+    background-color: transparent;
+    height: 5.5rem;
+    width: 2.5rem;
+    border: 3px solid rgb(164, 164, 164);
+    padding-top: 2.1em;
+}
+
+.button {
+    margin: auto;
+    background-color: rgb(255, 0, 0);
+    height: 15px;
+    width: 15px;
+}
+
+.wire {
+    display: inline-block;
+    background-color: black;
+    height: 1.5px;
+    width: 50%;
+
+}
+
+.main {
+    display: inline-block;
+    padding-top: 10em;
+}
+
+.bulb {
+    height: 8rem;
+    width: 8rem;
+    background-color: rgb(154, 151, 100);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 60%;
+}
+
+.stand {
+    margin: auto;
+    background-color: black;
+    height: 4rem;
+    width: 1rem;
+}
+
+.base {
+    background-color: rgb(255, 165, 0);
+    width: 8rem;
+    height: 1.5rem;
+}
+
+.switch:hover {
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.switch:active {
+    background-color: rgb(140, 140, 140);
+}
+
+.switch:active .button {
+    background-color: rgb(0, 255, 0);
+}
+
+.switch:active+.wire {
+    background-color: rgb(220, 175, 220);
+}
+
+.switch:active~.main>.bulb {
+    background-color: rgb(255, 255, 0);
+}
