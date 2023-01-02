@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(177, 177, 177);
+    padding: 5em 0;
+    
+}
+
+.book {
+    background-color: rgb(173, 216, 230);
+    width: 20%;
+    height: 15rem;
+    margin: auto;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+.cover {
+    background-color: rgb(128, 128, 128);
+    width: 90%;
+    height: 100%;
+    border: 3px dotted rgb(173, 216, 230);
+    padding: 1.5rem;
+    /* margin: auto; */
+    /* display: inline-block; */
+}
+
+.title {
+    color: white;
+    font-size: 1.2rem;
+    padding: 1em;
+}
+
+.img{
+    background-image: url("pussy.jpeg");
+    background-color: white;
+    padding: 2em 1em;
+	font-weight: bolder;
+	font-size: 1.2rem;
+	text-align: center;
+    height: 100%;
+    display: none;
+}
+
+.content{
+    display: none;
+	margin-top: -10rem;
+	margin-left: 1rem;
+}
+
+.content > * {
+    display: inline-block;
+}
+
+.txt{
+    background-color: yellow;
+	padding: 1em;
+	width: 12rem;
+	margin-left: 0.5rem;
+	visibility: hidden;
+}
+
+.book:hover > .cover{
+    margin-left: -90%;
+}
+
+.book:hover > .cover > .title {
+    display: none;
+}
+
+.book:hover > .cover > .img{
+    display: block;
+}
+
+.book:hover > .content {
+    display: block;
+}
+
+.cover:hover > .img {
+    color: red;
+    background-position: top;
+}
+
+.check:checked + .txt {
+    visibility: visible;
+}
