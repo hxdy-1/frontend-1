@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 8rem 1rem;
+    overflow: hidden;
+}
+
+.border {
+    border: 5px solid rgb(252, 226, 105);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 30rem;
+    /* align-items: center; */
+    /* margin-top: 8rem; */
+    /* margin-left: 1rem; */
+    /* margin-right: 1rem; */
+    /* width: 96rem; */
+    
+}
+
+.left, .right {
+    width: 45rem;
+    margin: .2rem;
+    padding: .5rem 1rem;
+}
+
+.body1, .body2 {
+    padding: 9.2rem;
+    margin-top: 1rem;
+}
+
+.header1, .header2 {
+    width: 35rem;
+    padding: 1.2rem;
+    margin: .75rem 5rem;
+}
