@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utility classes */
+
+.child {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    border-radius: 5%;
+    box-shadow: 0px 0px 4px 5px;
+    transition: all 1s 100ms ease-in;
+}
+
+/* component classes */
+
+.note {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.black_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 5%;
+    width: 30vw;
+    height: 50vh;
+    margin: 12vh auto;
+    position: relative;
+}
+
+.red {
+    background-color: red;
+    top: 10%;
+    left: 10%;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+    right: 10%;
+    bottom: 10%;
+}
+
+.red:hover {
+    width: 60%;
+    height: 60%;
+    z-index: 3;
+}
+
+.green:hover {
+    width: 60%;
+    height: 60%;
+    z-index: 2;
+}
+
+.blue {
+    z-index: 1;
+}

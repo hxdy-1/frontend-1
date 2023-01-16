@@ -16,16 +16,10 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1rem 2rem;  /*TRBL*/
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
     height: 30rem;
-    /* align-items: center; */
-    /* margin-top: 8rem; */
-    /* margin-left: 1rem; */
-    /* margin-right: 1rem; */
-    /* width: 96rem; */
-    
 }
 
 .left, .right {
