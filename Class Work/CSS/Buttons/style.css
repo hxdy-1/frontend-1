@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    background-color: rgb(255, 225, 170);
+}
+
+.btn {
+    display: block;
+    background-color: rgb(255, 60, 60);
+    color: rgb(255, 225, 170);
+    font-size: 1rem;
+    margin: 6rem auto;
+    padding: 2em 6em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: outline 500ms ease-in-out,
+    outline-offset 500ms ease-in-out,
+    padding 300ms ease-in-out;
+}
+
+.btn3 {
+    box-shadow: 2px 2px 5px black;
+}
+
+.btn1:hover {
+    outline: 5px solid  rgb(255, 60, 60);
+    outline-offset: 5px;
+}
+
+.btn2:hover {
+    outline: 5px solid rgb(255, 225, 170);
+    outline-offset: -10px;
+}
+
+.btn3:active {
+    padding: 1.6em 5.5em;
+}
