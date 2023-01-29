@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./StyleSheets/util.css">
+    <link rel="stylesheet" href="./StyleSheets/style.css">
+    <link rel="stylesheet" href="./StyleSheets/mediaqueries.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Gamers Hub</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="flex_between box_shadow_down | navbar">
+            <input type="checkbox" class="check" id="something">
+            <label for="something" class="hamburger_container">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </label>
+            <div class="menu_list">
+                <ul class="flex_center | m_list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="profile_list">
+                <span class="material-symbols-outlined">person</span>
+                <ul class="p_list">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li class="box_shadow_down"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="empty_spacing"></div>
+    <main class="main">
+        <section class="hero_section">
+            <div class="hero_img_container">
+                <img class="hero_img" src="./imgs/gaming-image.jpg" alt="">
+            </div>
+            <h1 class="hero_title"><span>One stop destination for all your gaming persuits</span></h1>
+
+            <div class=" | img_box_container">
+                <div class="img_box"></div>
+                <div class="img_box"></div>
+                <div class="img_box"></div>
+                <div class="img_box"></div>
+                <div class="img_box"></div>
+            </div>
+        </section>
+        <section class="overlay-box_container">
+            <p class="overlay_title">Varieties that are worth taking a look at...</p>
+            <div class="flex_center | overlay-box">
+                <div class="box_shadow_down flex_center | overlay">
+                    <div>
+                        <p class="genre_title">Single player</p>
+                        <a href="#" class="btn link_learn_more">learn more</a>
+                    </div>
+                </div>
+                <div class="box_shadow_down flex_center | overlay">
+                    <div>
+                        <p class="genre_title">Arcade</p>
+                        <a href="#" class="btn link_learn_more">learn more</a>
+                    </div>
+                </div>
+                <div class="box_shadow_down flex_center | overlay">
+                    <div>
+                        <p class="genre_title">Action</p>
+                        <a href="#" class="btn link_learn_more">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            All rights reserved <sup>&copy;</sup><u> Hady</u><sup>&trade;</sup></p>
+    </footer>
+</body>
+
+</html>

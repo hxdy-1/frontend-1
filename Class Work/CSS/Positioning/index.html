@@ -7,39 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <title>Page Positioning</title>
 </head>
 
 <body>
     <header>
-        
-            <nav>
-                <ul class="navbar">
-
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                  
-                </ul>
-            </nav>
-        
+        <nav>
+            <ul class="flex_center | navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    <div class="space"></div>
     <main>
-        <section class="border_style | left">
-            <div class="border_style |num">
-                <div class="one">1</div>
-                <div class="two">2</div>
-                <div class="three">3</div>
-                <div class="four">4</div>
+        <section class=" | section_one">
+            <div class="border_style-padding | left">
+                <div class="border_style-padding | num_card_container">
+                    <div class="flex_center | num_card">
+                        <div class="num">1</div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="flex_center | num_card">
+                        <div class="num">2</div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="flex_center | num_card">
+                        <div class="num">3</div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="flex_center | num_card">
+                        <div class="num">4</div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="shutter_overlay"></div>
+                </div>
+                <div class="border_style-padding | empty"></div>
             </div>
-            <div class="next_to_num"></div>
+            <div class="border_style-padding | right">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
         </section>
-        <aside>
-            <div class="grid"></div>
-        </aside>
+        <section class="border_style-padding | section_two"></section>
     </main>
-    <footer></footer>
+    <aside>
+        <div class="chat_container">
+            <span class="material-symbols-outlined | chat_img">chat</span>
+            <div class="nav_hover">To avail this feature, you have to purshase yearly subscription</div>
+        </div>
+    </aside>
 </body>
 
 </html>

@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+/* Resets */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Component Classes */
+
+.navbar {
+    background-color: rgba(128, 128, 128, .6);
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* hamburger */
+
+.check {
+    display: none;
+}
+
+.hamburger_container {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    height: .3rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: opacity 500ms ease-in-out,
+    transform 500ms ease-in-out;
+}
+
+.bar-1 {
+    transform: translateY(-4px);
+}
+
+.bar-3 {
+    transform: translateY(4px);
+}
+
+.bar-1,
+.bar-3 {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .4);
+}
+
+.check:checked~.hamburger_container>.bar-2 {
+    opacity: 0;
+}
+
+.check:checked~.hamburger_container>.bar-1 {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.check:checked~.hamburger_container>.bar-3 {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* hamburger ends */
+
+.m_list li {
+    font-style: italic;
+    font-weight: bold;
+    transition: color 400ms ease-in-out,
+    font-weight 400ms ease-in-out;
+}
+
+.m_list li:hover {
+    color: rgb(255, 0, 0, .9);
+    font-weight: bolder;
+}
+
+.profile_list {
+    position: relative;
+}
+
+.profile_list>span {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: .5em;
+    cursor: pointer;
+
+}
+
+.p_list {
+    position: absolute;
+    padding: 2em;
+    top: 60%;
+    right: -50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out;
+}
+
+.p_list > li {
+    border: 2px solid white;
+    border-bottom: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1em 2em;
+    transition: background-color 500ms ease-in-out;
+}
+
+.profile_list:hover .p_list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.p_list li:hover {
+    background-color: rgba(255, 0, 0, .7);
+}
+
+.p_list>*:last-child {
+    border-bottom: 3px solid white;
+}
+
+
+.empty_spacing {
+    padding: 3em;
+}
+
+.hero_img_container {
+    width: 70%;
+    margin: auto;
+}
+
+.hero_img {
+    width: 100%;
+}
+
+.hero_title {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    font-size: 4vw;
+    line-height: 1.35;
+    transform: skewY(-6deg);
+    position: sticky;
+    top: 15%;
+}
+
+.hero_title > span {
+    background-color: rgba(128, 128, 128, .6);
+    border: 2px solid red;
+    padding: .15em .4em;
+}
+
+.img_box_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img_box {
+    background-image: url(../imgs/gaming-studio.jpg);
+    background-size: cover;
+    background-color: white;
+    padding: 10em 5em;
+    cursor: pointer;
+}
+
+.img_box:nth-child(1)~.img_box {
+    opacity: 0;
+}
+
+.img_box:nth-child(1):hover~.img_box {
+    opacity: 1;
+}
+
+.img_box:nth-child(2) {
+    background-position: 25%;
+    transition: opacity 300ms ease-in-out;
+}
+
+.img_box:nth-child(3) {
+    background-position: 50%;
+    transition: opacity 600ms ease-in-out;
+}
+
+.img_box:nth-child(4) {
+    background-position: 75%;
+    transition: opacity 900ms ease-in-out;
+}
+
+.img_box:nth-child(5) {
+    background-position: 100%;
+    transition: opacity 1100ms ease-in-out;
+}
+
+.overlay_title {
+    margin-top: 5rem;
+    font-size: 1.8rem;
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 2px 4px;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.overlay-box {
+    padding: 5em;
+    color: rgb(255, 0, 0);
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    padding: 4.5em 0;
+    background-image: url(../imgs/Minecraft-dark-screen.jpg);
+    background-size: cover;
+    background-position: top;
+    border-radius: 10px;
+    transition: outline 700ms ease-in-out,
+    outline-offset 500ms ease-in-out,
+    box-shadow 500ms ease-in-out;
+}
+
+.overlay::before {
+    content: '';
+    background-color: rgba(128, 128, 128, .5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform: scaleY(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.overlay:nth-child(2) {
+    background-image: url(../imgs/league-of-legendsimage.jpg);
+    background-position: center;
+}
+
+.overlay:nth-child(3) {
+    background-image: url(../imgs/Red_Dead_Redemption_II.jpg);
+}
+
+.overlay:hover {
+    outline: 5px solid white;
+    outline-offset: 10px;
+    box-shadow: none;
+}
+
+.overlay:hover::before {
+    transform: scaleY(1);
+}
+
+.genre_title {
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+.link_learn_more {
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, .9);
+    
+}
+
+.overlay>* {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    z-index: 1;
+}
+
+.overlay:hover>div {
+    opacity: 1;
+}
+
+.footer {
+    margin-top: 2rem;
+    background-color: rgba(128, 128, 128, .6);
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
