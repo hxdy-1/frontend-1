@@ -1,0 +1,120 @@
+.first_post {
+    background-image: url("https://img.freepik.com/free-vector/calligraphic-background-motivational-quote_52683-16294.jpg?w=2000");
+}
+
+.second_post {
+    background-image: url("https://thumbs.dreamstime.com/b/life-inspirational-quotes-be-stronger-than-your-excuses-blurry-background-motivational-170115740.jpg");
+}
+
+.third_post {
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/inspirational-quote-booker-washington-1658173567.png?resize=480:*");
+}
+
+
+.likes_comments {
+    z-index: 3;
+    transition: opacity 500ms ease-in-out,
+        color 500ms ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: background-color 500ms ease-in-out,
+        opacity 500ms ease-in-out;
+}
+
+
+.post {
+    position: relative;
+    width: 30vw;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.post:hover>* {
+    visibility: visible;
+    opacity: 1;
+}
+
+.post::before {
+    content: '';
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.post:hover::before {
+    transform: scaleX(1);
+}
+
+.modal_container {
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 90vh;
+    width: 85vw;
+    background-color: white;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-color: black;
+    background-position: center;
+    background-image: url("https://img.freepik.com/free-vector/calligraphic-background-motivational-quote_52683-16294.jpg?w=2000");
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.homework {
+    flex-grow: 1;
+    font-size: xx-large;
+}
+
+.comment_box_container {
+    border-top: 1px solid gray;
+    width: 100%;
+    gap: 0;
+}
+
+.comment_box_container>*:nth-child(2),
+.comment_box_container>*:nth-child(2)>* {
+    width: 100%;
+}
+
+.fa-face-smile {
+    padding: .5em;
+    font-size: 1.5rem;
+}
+
+.modal_drop_shadow {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    top: 0;
+    left: 0;
+    text-align: end;
+}
+
+.fa-xmark {
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: .4em;
+}

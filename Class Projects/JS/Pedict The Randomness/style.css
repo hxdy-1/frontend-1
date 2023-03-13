@@ -16,6 +16,12 @@ body {
 
 /* utility classes */
 
+.flex_around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .btn {
     border: none;
     border-radius: 50%;
@@ -24,10 +30,23 @@ body {
     cursor: pointer;
 }
 
-.flex_around {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.input {
+    padding: .5em;
+    border: none;
+    outline: none;
+    border-radius: var(--border-rad1);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all var(--transition-1);
+}
+
+.input:focus {
+    outline: 1px solid rgb(204, 204, 204);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+input::placeholder {
+    color: darkslategrey;
 }
 
 /* component classes */
@@ -51,10 +70,24 @@ body {
     gap: 0;
 }
 
+.input_redeem {
+    width: 15rem;
+    padding: 1em;
+    cursor: default;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out, background-color 300ms ease-in-out, outline 300ms ease-in-out;
+}
+
+.restart_btn_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
 .restart_btn {
     color: white;
     background-image: linear-gradient(to bottom right, rgb(38, 43, 51), rgb(117, 105, 115),rgb(198, 109, 77));
-    /* background-image: linear-gradient(to bottom right, rgb(70, 85, 110),rgb(220, 140, 110)); */
     border-radius: 5px;
     margin-top: 20%;
     padding: 1.5em 3em;
@@ -81,13 +114,11 @@ body {
     color: white;
     cursor: default;
     background-color: white;
-    /* width: 2rem; */
     text-align: center;
     padding: 1.8em 2.7em;
     border-radius: 5px;
     font-size: larger;
     background-image: linear-gradient(to bottom right, rgb(38, 43, 51), rgb(117, 105, 115),rgb(198, 109, 77));
-    /* background-image: linear-gradient(to bottom right, rgb(37, 52, 79),rgb(213, 110, 73)); */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 

@@ -1,0 +1,95 @@
+.section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    height: 70%;
+    border-radius: 8px;
+    padding: 2em;
+    font-weight: 200;
+}
+
+.card p:nth-child(2) {
+    font-size: 3rem;
+}
+
+.card p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.current_point_container {
+    gap: 2rem;
+}
+
+.current_point_container p {
+    font-size: 3rem;
+}
+
+.current_point_container span {
+    cursor: pointer;
+    font-size: 3rem;
+    background-color: black;
+    box-shadow: .5px .5px 5px rgba(255, 255, 255, 0.7);
+}
+
+.current_player {
+    font-weight: 600;
+    background-image: linear-gradient(to top right, rgb(0, 161, 161), rgb(149, 101, 101));
+}
+
+.points {
+    outline: 4px solid aquamarine;
+    outline-offset: -15px;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    height: 100px;
+    width: 100px;
+}
+
+.shooter {
+    background-color: white;
+    height: 4rem;
+    width: 2rem;
+}
+
+.bottom_shooter {
+    height: 8rem;
+}
+
+.num_container {
+    user-select: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.num_container>*:nth-child(1) {
+    display: block;
+    margin: 0 auto 0 2rem;
+}
+
+.points_container {
+    gap: 1rem;
+    margin-right: 4rem;
+}
+
+.laser {
+    background-color: aqua;
+    height: 4px;
+    width: 230px;
+    /*115*/
+    position: absolute;
+    right: 4rem;
+}

@@ -9,16 +9,18 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <section class="container | flex_around">
+    <main class="container | flex_around">
         <section class="left">
-            <div class="restart_btn_container">
-                <button class="restart_btn | btn">
-                    Restart
-                </button>
+            <div class="restart_btn_container | ">
+                <label for="redeem">
+                    <input type="text" id="redeem" class="input | input_redeem"
+                        placeholder="Comma separated (without space)">
+                </label>
+                <button class="restart_btn | btn">Restart</button>
             </div>
             <div class="txt_container">
                 <div class="txt"><span id="info">start the game by clicking a no.</span></div>
-                <div class="txt">Attempts remaining: <span id="attempts">50</span></div>
+                <div class="txt">Attempts remaining: <span id="attempts">0</span></div>
                 <div class="txt">Best attempts score: <span id="score">0</span></div>
 
             </div>
@@ -38,6 +40,13 @@
                 <button class="btn | btn_cmn">10</button>
             </div>
         </section>
-    </section>
+    </main>
 </body>
 </html>
+
+<label for="redeem">
+    <input type="text" id="mytxt" class="input | input_redeem1"
+        placeholder="Comma separated (without space)">
+</label>
+<button type="button" onclick="myFunction()">Try it</button>
+<p id="demo"></p>

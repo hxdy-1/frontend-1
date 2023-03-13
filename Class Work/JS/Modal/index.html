@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="util.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
+    <script
+        src="script.js" defer>
+    </script>
+    <title>Modal</title>
+</head>
+
+<body>
+    <main class="container flex_center">
+        <div class="first_post post flex_center">
+            <div class="overlay hidden"></div>
+            <p class="likes_comments hidden flex_center"><span><i class="fa-solid fa-heart"></i> 25</span><span><i
+                        class="fa-sharp fa-solid fa-comment"></i> 50</span></p>
+        </div>
+        <div class="second_post post flex_center">
+            <div class="overlay hidden"></div>
+            <p class="likes_comments hidden flex_center"><span><i class="fa-solid fa-heart"></i> 25</span><span><i
+                        class="fa-sharp fa-solid fa-comment"></i> 50</span></p>
+        </div>
+        <div class="third_post post flex_center">
+            <div class="overlay hidden"></div>
+            <p class="likes_comments hidden flex_center"><span><i class="fa-solid fa-heart"></i> 25</span><span><i
+                        class="fa-sharp fa-solid fa-comment"></i> 50</span></p>
+        </div>
+    </main>
+    <aside class="modal_container hidden">
+        <div class="left"></div>
+        <div class="right">
+            <p class="homework flex_center">HOME-WORK</p>
+            <div class="comment_box_container flex_center">
+                <i class="fa-solid fa-face-smile"></i>
+                <label for="comment">
+                    <input type="text" id="comment" placeholder="Add a comment">
+                </label>
+                <input type="submit" value="Post">
+            </div>
+        </div>
+    </aside>
+    <aside class="modal_drop_shadow hidden">
+        <button><i class="fa-solid fa-xmark cross"></i></button>
+    </aside>
+</body>
+
+</html>
