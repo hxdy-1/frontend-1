@@ -6,7 +6,7 @@ str = str.toLowerCase().split(" ");
 let arr = [];
 
 for(let ofElement of str){
-    var merged1 = ofElement[0].toUpperCase()+ofElement.slice(1);
+    let merged1 = ofElement[0].toUpperCase()+ofElement.slice(1);
 
     arr.push(merged1)
 };
