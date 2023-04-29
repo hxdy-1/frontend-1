@@ -5,54 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="util.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Greed Shot</title>
 </head>
 
 <body>
-    <main class="main">
-        <section class="section top ">
-            <div class="card | current_player">
-                <p>Gamer 1</p>
-                <p class="total_score">0</p>
+    <main class="main_container">
+        <section class="container | container_styling">
+            <div class="overall_score_container | overall_score_container_styling player--active" id="player--0">
+                <h2 class="player_label">Player 1</h2>
+                <span class="player_score" id="overall_score--0">40</span>
             </div>
-            <div class="current_point_container flex_center">
-                <p class="current_point">2</p>
-                <span class="material-symbols-outlined">add</span>
-            </div>
-        </section>
-        <section class="section bottom ">
-            <div class="card">
-                <p>Gamer 2</p>
-                <p class="total_score">0</p>
-            </div>
-            <div class="current_point_container flex_center">
-                <p class="current_point">0</p>
-                <span class="material-symbols-outlined hidden">add</span>
+            <div class="current_score_container">
+                <span class="curr_score" id="current_score--0">10</span>
+                <img src="./Images/add-svgrepo-com (1).svg" class="add_curr_score" id="add_curr_score--0"
+                    alt="add current score">
             </div>
         </section>
-        <aside class="aside num_container flex_center">
-            <button class="btn">Restart 🔄</button>
-            <div class="points_container flex_center">
-                <div class="points flex_center warning_clr">10</div>
-                <div class="points flex_center">9</div>
-                <div class="points flex_center">8</div>
-                <div class="points flex_center">7</div>
-                <div class="points flex_center">6</div>
-                <div class="points flex_center warning_clr">5</div>
-                <div class="points flex_center">4</div>
-                <div class="points flex_center">3</div>
-                <div class="points flex_center">2</div>
-                <div class="points flex_center warning_clr">1</div>
+        <section class="container | container_styling">
+            <div class="overall_score_container | overall_score_container_styling" id="player--1">
+                <h2 class="player_label">Player 2</h2>
+                <span class="player_score" id="overall_score--1">40</span>
             </div>
-            <div class="shooter top_shooter"></div>
-            <div class="shooter bottom_shooter"></div>
+            <div class="current_score_container">
+                <span class="curr_score" id="current_score--1">10</span>
+                <img src="./Images/add-svgrepo-com (1).svg" class="add_curr_score isDisabled" id="add_curr_score--1"
+                    alt="add current score">
+            </div>
+        </section>
+        <div class="actions_container">
+            <button class="btn restart_btn">Restart 🔄</button>
+            <div class="ruler_container">
+                <!-- Semantically, these all should be buttons: -->
+                <div class="flex_center | popup | popup_styling | warning">10</div>
+                <div class="flex_center | popup | popup_styling">9</div>
+                <div class="flex_center | popup | popup_styling">8</div>
+                <div class="flex_center | popup | popup_styling">7</div>
+                <div class="flex_center | popup | popup_styling">6</div>
+                <div class="flex_center | popup | popup_styling | warning">5</div>
+                <div class="flex_center | popup | popup_styling">4</div>
+                <div class="flex_center | popup | popup_styling">3</div>
+                <div class="flex_center | popup | popup_styling">2</div>
+                <div class="flex_center | popup | popup_styling | warning">1</div>
+            </div>
+            <div class="shooter_container | shooter_container_styling"></div>
             <div class="laser"></div>
-        </aside>
+        </div>
     </main>
 </body>
 
