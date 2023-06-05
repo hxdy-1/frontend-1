@@ -1,0 +1,106 @@
+internal working of js:
+
+same funtion names overwrites all the functions decalerd above that.
+
+WORKING OF EC:
+global space/global code : the code which is not inside a function. 
+
+everything in js happens inside of an execution context.
+
+there are 2 types of execution context:
+1.global ec (GEC)
+2.functional ec(FEC)
+
+1.GEC:
+a.memory component: stores all the variables and functions, 
+
+b.code component: execute the stored code.
+
+2.FEC:
+a.memory component: stores all the variables and functions
+
+b.code component: execute the stored code.
+
+every execution context occurs in two phases:
+1. creation phase: memory component:
+
+it occurs in stages:
+a.creation of variable obj
+
+b.creation of lexical environment:
+
+lexical environment of an execution context is the variable object along with the reference to it's parent's lexical environment.
+
+the parent is determined according to the lexical scope.
+
+c.creation of this keyword
+
+2. execution phase: code component
+
+when the function is invoked, a new execution context is created which is FEC:
+
+CALLSTACK:
+for the js engine to manage execution context, it uses call stack.
+
+call stack is a ds which stores and maintain the order of execution of all execution contexts.
+
+each time a new execution context is created, it gets pushed in the callstack.
+
+the executin context at the top of the callstack is the current active ec.
+
+WINDOW OBJ:
+a window obj is created by the browser along with the GEC.
+
+window obj is also called global obj.
+
+window obj stores all the thing which is written on the script
+
+HOISTING:
+it is a phenomenon in js which allows us to access variables and functions before the line of their declaration/defination.
+
+in hoisting, var gives undefined if the variable/function defined using var is called before the declaration.
+
+VAR, LET, & CONST:
+
+var gets attached to window object but not the let and const.
+
+let and const are hoisted but are placed initially TDZ(temporal dead zone).
+
+TDZ: it is a phase between hoisting of let and const (in a perticular scope) till the line of declaration.
+
+TYPES OF ERROR:
+refrrence, type, syntax.
+
+SCOPE: is the region where a certain entity can be accessed, scope in js is directly related to Lexical environment.
+
+types of scopes:
+1.Global scope
+2.Function scope
+3.Block scope (intruduced in ES6)
+4.Lexical scope
+
+1.Global scope: global code, which is not inside any loop, function or variable, global entities are access able throughout the document
+
+2.Function scope: the code/entity inside a function has a function scope means they can only be accessed inside that function.
+
+var variables are function scoped, if they aren't created in a function, they are global scoped.
+
+3.Block scope: blocks are defined using {}
+let and const are bloked scoped. because they are only accessable in the given block
+from ES6 functions are also blocked scoped but in strict mode.
+
+4.lexical scope is the defination area of an entity.
+
+lexical scoping defines how variables are resolved in nested functions
+
+the scope in which you have defined the function is the lexical scope of that function.
+
+SHADOWING:
+
+when 2 varibles of same name, but declaredd in 2 diffrent scopes, the one in inner scope will shadow the outter one.
+
+SCOPE CHAINING:
+
+the machanism of searching for an entity using the lexical parent's reference is called scope chaining.
+
+

@@ -1,0 +1,22 @@
+Local Storage
+
+Local storage is the place in the browser where we can store data that will stay even after we close the page. It's used to persist small amount of data in the Browser itself
+
+localStorage.setItem(key, value)
+
+localStorage.getItem(key)
+
+localStorage.removeItem(key)
+
+
+JSON (JavaScript Object Notation):
+
+JS object converted to string.
+
+const arr = ["something", "random"]
+
+const arrStr = JSON.strigify(arr) // converts an JSO to string
+
+const newArr = JSON.parse(arrStr) // converts the string to JSO
+
+

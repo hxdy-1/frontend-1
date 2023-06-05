@@ -1,0 +1,22 @@
+css units are classified as Absolute units:px, cm, in etc.
+and Relative units:%, vh, vw, rem, etc.
+
+%: it is relative to the parents dimensions.
+
+vh-vw: are viewport based height and width.
+
+em and rem: are relative to the parents font size
+
+1em = 16px by default
+
+disadvantage of em starts to compund across the chidren.
+
+em apply the size acording to its direct parent.
+
+rem apply the size according to the root parent. <html>
+
+whenever we use em on height, width, margin, padding it acts according to the font size of the current element.
+
+font-size: rem, width: % or rem, margin: rem, padding: em, heigth: min/max height. 
+
+by default unit is em which is equivelant to 16px.

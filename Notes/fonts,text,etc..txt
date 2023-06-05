@@ -1,0 +1,19 @@
+fonts: fonts.google.com 
+
+text-align is used to horizontally align the text.
+
+text-align-last is used to align the last line of the given text.
+
+text-decoration: it used to decorate the text.
+style  color thickness (shorthand for text-decoration).
+
+letter-spacing: used to define space between letters.
+
+word-spacing: used to define the space between words.
+
+line-height: used to define space between lines and gives space on top and bottom of a given line. always use em for it.
+
+whatfont-chrome extension
+
+css peepers-used to download the image assets.
+

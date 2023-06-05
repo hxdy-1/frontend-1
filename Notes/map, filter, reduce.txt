@@ -1,0 +1,27 @@
+map, filter, reduce
+
+all three of them are array methods.
+
+1.map():
+
+map returns a new array of same size which containes the transformed elements of the given array.
+
+length of the returned array always stays the same as original array.
+
+map returns an array while forEach() doesnt.
+
+
+2.filter():
+
+filter returns a new array which contains only the filtered elements.
+
+length of the returned array can be equal or less than the original array.
+
+filter returns an array while forEach() doesnt.
+
+the callback we pass to the filter, must return a boolean.
+
+
+3.reduce():
+
+reduce returns just a value depanding upon the logic. never returns an array.

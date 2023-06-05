@@ -1,0 +1,9 @@
+some, every
+
+The callback we pass to some, every,  should return boolean.
+
+some => returns true if any element of the array satisfies the condition, otherwise false.
+
+
+every => returns true if all the elements of the array satisfies the condition, otherwise false
+

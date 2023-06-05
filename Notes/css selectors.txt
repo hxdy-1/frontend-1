@@ -1,0 +1,18 @@
+css selectors are used to select/target an element to style.
+the three basic types of selectors are: simple, combinator, and attribute selector.
+simple selectors are used to select elements on the basis of tag names, ids, classes.
+combinator selectors are that who explain the relation between selectors:
+
+1.descendants: for ex. main p {} - where main is parent and p is children of main.
+
+2.immediate children: div > span {} - where div is parent and span is its immediate children.
+
+3.immediate sibling: div + span {} - where div and span are immediate siblings of eachothers
+
+4.genral sibling: div ~ span {} - where div and all span are genral siblings of each other.
+
+attribute selectors: input[any attribute which diffrentiate between alll input] {}
+
+multiple classes and ids selectors: .div1.div2 for class
+#div1#div2 for ids
+.div1#div2 for both id and classes

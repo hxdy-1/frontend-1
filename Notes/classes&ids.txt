@@ -1,0 +1,11 @@
+classes and ids are attributes
+they are called global attribute
+ids are meant to be unique thru out the page
+diffrenet elements can have same class 
+multiple classes can be used on single elements
+classes are space delimited
+classes should be used for styling
+and ids should be used for js
+
+
+float: right; -  used to shift an element.	

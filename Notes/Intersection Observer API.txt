@@ -1,0 +1,39 @@
+Intersection Observer API
+
+it is given from the browser
+
+we observe intersection of two elements
+
+Root element (parent)
+Target element (child)
+
+Intersection observer API allows our code to observe changes in the intersection of a target element, with an ansector element or the viewport.
+
+It allows us to register a callback function that's executed whenever an element we wish to monitor enters or exits another element (or the viewport). Or when the amount by which the two intersection changes by a requested amount.
+
+root: should mention root element
+
+threshold (ranges from 0 to 1): 0 is for 1px and 1 is for 100% of the targeted element.
+
+rootMargin: gives margin to the root element.
+
+
+syntax:
+
+const callback = function(entry, observer) {
+    if(entry[0].isIntersecting){
+    console.log("The target element intersected the root element)
+    }
+
+}
+
+const object = {
+    root: "",
+    threshold: "",
+    rootMargin: ""
+}
+
+const observer = new IntersectionObserver(callback, object);
+
+observer.observer()
+

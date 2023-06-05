@@ -1,0 +1,32 @@
+ls
+cd ..
+cls
+cd (name of the folder we wanna open)
+ls -lart
+rm -rf (name of the folder we wanna delete)
+touch (create new folder)
+
+git init - to initialize repo
+git add -  name of the folder
+git commit -m "(a message)"
+git add . - to stage all the folders.
+git add . && git commit -m "all added to repo".
+git log - to get all logs 
+git status - to get the status of all folders
+git reset --hard HEAD - to go to last commit.
+git reset --hard (id of the commit we wanna go to)
+git branch (name of the branch) - to create a new branch
+git branch - to check the branch where we are in
+git checkout (name of the branch we wanna switch to) - to switch branches.
+git merge (name of the branch we want to merge) - to merge branches 
+bana bhi do switch bhi kr jao
+git checkout -b (name of the new branch) - 
+
+bina commit kare branch change nahi krne ka
+wrna maaster me bhi changes aa jayenge
+
+never switch to branch without committing the changes in the current branch.
+
+
+
+the new branch will be an exact copy of the current branch in which we can develop codes and new features without affecting the previous branch

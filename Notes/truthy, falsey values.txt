@@ -1,0 +1,32 @@
+truthy, falsey values
+
+6 falsey values:
+
+undefined, "", 0, null, false.
+
+
+3 characteristics of logical operators:
+
+1. they can be used with any datatype.
+
+2. they can return any datatype.
+
+3. they can be short circuit.
+
+
+OR (||) oprator looks for truthy values, if all the values are falsey, it returns the last falsey value.
+
+AND (&&) operator looks for falsey values, if all the values are truthy
+
+NULLISH COALESCING OPERATOR(??):
+
+nullish values: null and undefined are nullish values.
+
+OPTIONAL CHAINING(?.):
+
+we can use optionl chaining with arrys, methods, and objects.
+
+it continues if the left side values are not nullish values.
+
+
+

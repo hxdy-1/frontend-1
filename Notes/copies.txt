@@ -1,0 +1,9 @@
+copies:
+
+creating shallow copies:
+
+const friend = Object.assign({}, person1)
+
+creating deep copies:
+
+const friend = JSON.parse(JSON.stringify(person1))

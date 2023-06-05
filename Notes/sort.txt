@@ -1,0 +1,19 @@
+sort
+
+sort => rearranging the elements of an array in ascending or descending fashion.
+
+sort mutates the original array.
+
+arr.slice(0).sort() is used to prevent mutation of the original array.
+
+sort converts all the elements of an array into string then sort it.
+
+To sort an array on the basis of numerical order, we need to pass a compare-function to the sort().
+
+if we return a positive number from the compare function, we are asking the order of a and b to be intercahnged.
+
+and if we return a negative number, the order remains the same.
+
+narr.sort((a, b) => a - b) == for ascending order.
+
+narr.sort((a, b) => b - a) == for descending order.

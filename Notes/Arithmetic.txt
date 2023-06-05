@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arithmetic
+{
+    class Arithmetic
+    {
+        private int num1;
+        private int num2;
+
+        public int Num1
+        {
+            set { num1 = value; }
+            get { return num1; }
+        }
+        public int Num2
+        {
+            set { num2 = value; }
+            get { return num2; }
+        }
+        public int add()
+        {
+            return num1 + num2;
+        }
+        public int sub()
+        {
+            return num1 - num2;
+        }
+        public int mul()
+        {
+            return num1 * num2;
+        }
+        public int div()
+        {
+            return num1 / num2;
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Arithmetic a = new Arithmetic();
+            Console.WriteLine("Enter Number 1");
+            int no1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Number 2");
+            int no2 = Convert.ToInt32(Console.ReadLine());
+
+            a.Num1 = no1;
+            a.Num2 = no2;
+
+            Console.WriteLine("Addition is:" +a.add());
+            Console.WriteLine("Substraction is:" + a.sub());
+            Console.WriteLine("Multiplication is:" + a.mul());
+            Console.WriteLine("Division is:" + a.div());
+            Console.Read();
+            
+        }
+    }
+}

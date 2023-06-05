@@ -1,0 +1,16 @@
+IIFE
+
+(Immediately Invoked Function Expression)
+
+IIFE is a function that gets executed as soon as it is defined.
+
+syntax:
+
+(function() {
+
+})();
+
+or:
+
+(function() {})();
+

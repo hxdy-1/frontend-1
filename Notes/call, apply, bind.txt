@@ -1,0 +1,29 @@
+Call,Apply,Bind
+
+all three of these methods are used to manually manipulate the value fo "this" keyword.
+
+1. call()
+
+The first argument of call() is which "this" keyword points to.
+
+ex. function func (param1, param2) {
+	console.log(this)
+	console.log(param1)
+	console.log(param2)
+}
+
+func.call(10, argument1", "argument2")
+
+>>>   10
+	argument1
+	argument2
+
+2.apply()
+
+apply() is same as call but takes all arguments in the form of an array after the first argument.
+
+3.bind()
+
+Bind immediately doesn't invoke the function. rather, it returns a new function with "this" keyword set appropriately.
+
+note: The value of "this" keyword possesed by an arrow function can never be changed.

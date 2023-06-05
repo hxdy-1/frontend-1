@@ -1,0 +1,75 @@
+chrome has V8 engine for JS.
+
+js is loosely typed language.
+
+value = piece of data/information.
+
+int age = 30;
+
+where age is a variable (container) and 30 is a value stored in that variable. and int is the data type (type of variable) that is integer.
+
+variables can't be start with a number.
+spaces not allowed use underscore or camel case instead.
+reserved keywords cant be used as a name.
+
+primitive (numbers, string, boolean, undefined, null, bigint, symbol)
+object (var, let, const)
+
+defer = downloads html and js file parallel but execute html first then js file.
+
+prompt recives inputs as string.
+
+string: set of characters 
+
+let firstName = "random";
+let birthYear = 2002;
+let workStatus = "student"
+
+print: random's age is 23 and he's a student
+
+let age = 2023 - birthYear
+
+console.log(`${firstName}'s age is ${age} and he's a ${student}`)
+
+typecasting:-
+
+number to string:
+
+let age = 20;
+console.log(age + " ");
+
+string to number:
+
+let age = "20";
+console.log(Number(age));
+
+three ways to declare variables in js:-
+
+var (redeclaration is possible)
+
+var age = 20;
+var age = 30;
+
+console.log(age);
+> 30
+
+
+let (cant be re declare)
+
+let age = 20;
+let age = 30;
+
+console.log(age);
+> Identifier 'age' has already been declared
+
+
+const (cant be redeclared and reinitilized)
+
+const age = 20;
+const age = 30;
+
+console.log(age);
+> Identifier 'age' has already been declared
+
+
+

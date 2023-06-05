@@ -1,0 +1,28 @@
+this keyword
+
+this keyword/this variable, is a special varibale created in each execution context and takes the value of the owner of the function in which "this" keyword is used.
+ 
+"this" keyword is not static.
+
+there are 6 scenarios where "this" haave diffrent values:
+
+1. "this" in global scope:
+
+"this" in the global scope points to winddow obj.
+
+2. "this" in a method:
+
+"this" in the method points to the object which is invoking the method.
+
+3. "this" in regular (declaration and expression) function calls:
+
+"this" in a regular function call points to window obj in sloppy mode. while gives undefined in strict mode.
+
+4. "this" in Arrow function:
+arrow functions doesn'thave "this" keyword, instead they pick it from its parent scope, "this" keyword in arrow function also called as Lexical "this".
+they points to the parents "this".
+
+5. "this" in eventlistner points to its DOM element
+
+6. new, call, apply, and bind.
+

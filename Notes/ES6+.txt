@@ -1,0 +1,48 @@
+ES6+
+
+Enhanced object litral syntax:
+
+we can add a key value pair just by writing the name of the previously existing variable, function, and obj.
+
+Computed properties:
+
+we can use [] to use template litral to define desired keys in obj.
+
+
+Object.entries():
+
+returns a 2D array which contains key at 0 index and value at 1 index.
+
+
+Destructuring:
+
+Array destructuring:
+it is an ES6 feature that is used to unpack the elements of an array(object, map, set)into seprate variables.
+
+const arr = [10, 20, [40, 50, 30]]
+
+const [a, b, c] = arr
+
+console.log(a, b, c)
+
+=> 10
+   20
+   30
+
+nested de-structuring:
+
+const [, obj, [, , x]] = arr
+
+
+
+Object destructuring:
+
+const person = {}
+
+name of the new variable must be same to which key its getting assigned to.
+
+order doesn't matter
+
+alias:
+
+const {intelligent: intelligence} = person

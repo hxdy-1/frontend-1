@@ -1,0 +1,41 @@
+bg images 
+bg-repeat: no-repeat -
+repeat-x -
+repeat-y -
+
+bg size: contain - always shows complete image, used when img is more important to show.
+
+bg size: cover - covers the whole element with image and never shows the bg without img, sometimes crops the image.
+
+bg position: X axis value Y axis value (single value defines both axis)
+
+top, bottom, left, right, center, and top(right, left), bottom(right, left)
+
+background: color image bg-repeat position; - shorthand for all bg values (not preferrable).
+
+*pseudo classes*
+
+used to defne a special state for an element.
+
+hover - when we take cursor on the element.
+
+focuse - when we click on element.
+
+visited - for visited elements
+
+active - the time when we click on the element (time span when we hold the mouse button)
+
+.container: not(p) {
+	color: white;
+}
+
+above code will apply color on all the elements of .container except p.
+
+MDN - a website for docs and advanced concepts.
+
+visited > hover > active - this is the order for applying pseudo classes on links/elements.
+
+specificity wins over cascade.
+
+id = 100, class = 10, normal tag = 1 - specificity of selectors.
+

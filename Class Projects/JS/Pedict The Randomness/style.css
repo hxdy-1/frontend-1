@@ -34,10 +34,10 @@ body {
     padding: .5em;
     border: none;
     outline: none;
-    border-radius: var(--border-rad1);
+    border-radius: 3px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.3);
-    transition: all var(--transition-1);
+    transition: all;
 }
 
 .input:focus {
@@ -71,9 +71,9 @@ input::placeholder {
 }
 
 .input_redeem {
+    cursor: pointer;
     width: 15rem;
     padding: 1em;
-    cursor: default;
     opacity: 0;
     transition: opacity 300ms ease-in-out, background-color 300ms ease-in-out, outline 300ms ease-in-out;
 }

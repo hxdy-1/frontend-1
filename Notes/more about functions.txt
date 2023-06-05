@@ -1,0 +1,26 @@
+more about functions
+
+parameter de structuring.
+
+default parameter:
+
+funtion createOrder (order, qty = 3, price = 100)
+
+createOrder("Pizza", undefined, 500)
+
+JS does passing by values.
+
+functions are first class citizens of JS because functions are just values in JS
+
+additonal features of JS functions as they are first citizens:
+
+1. functions can be stored in variables and can also be stored as a value in an objject.
+
+2. functions can be passed to another functions as an argument (callbacks).
+
+3. functions can be returned from another function.
+
+4. we can invoke methods on function.
+
+5. functions also have properties.
+

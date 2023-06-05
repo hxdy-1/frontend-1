@@ -17,9 +17,11 @@ const generateRandomNum = (min, max) => Math.trunc(Math.random(max - min) * max)
 // application data:
 
 const winCount = 2;
-let attemptsRemaining = 30, correctGuesses = 0, gameOver = false, highScore = 0;
+let attemptsRemaining = 30, correctGuesses = 0, gameOver = false, highScore = 0, redeemCode = "";
 
 function init() {
+    inputRedeemEl.value = "";
+
     correctGuesses = 0;
 
     attemptsRemaining = 30;
@@ -55,23 +57,26 @@ for (let i = 0; i < btn_cmnEl.length; i++) {
         }
 
         ans_boxEl.textContent = generateRandomNum(1, 10)
-        console.log(`${ans_boxEl.textContent} generated randomly`);
+        // console.log(`${ans_boxEl.textContent} generated randomly`);
 
         const btnClicked = btn_cmnEl[i].textContent;
-        console.log(`when ${btnClicked} was clicked`);
-
-
+        // console.log(`when ${btnClicked} was clicked`);
 
         if (ans_boxEl.textContent === btnClicked) {
             infoEl.textContent = "Correct prediction :)"
             correctGuesses++;
 
+            redeemCode += btnClicked + ",";
+
             if (correctGuesses === winCount) {
-                infoEl.textContent = "You won!!!"
+                infoEl.textContent = "You won!!!";
                 gameOver = true;
-                ans_boxEl.style.backgroundImage = "none"
-                ans_boxEl.style.backgroundColor = "rgba(0, 255, 0, .5)"
-                ans_boxEl.style.color = "black"
+                ans_boxEl.style.backgroundImage = "none";
+                ans_boxEl.style.backgroundColor = "rgba(0, 255, 0, .5)";
+                ans_boxEl.style.color = "black";
+                setTimeout(() => {
+                    ans_boxEl.textContent = "?";
+                }, 650)
                 inputRedeemEl.style.opacity = "1";
 
                 if (attemptsRemaining > highScore) {
@@ -85,9 +90,19 @@ for (let i = 0; i < btn_cmnEl.length; i++) {
     })
 }
 
-restartBtnEl.addEventListener("click", init)
+restartBtnEl.addEventListener("click", () => {
 
-function myFunction() {
-    var x = document.getElementById("mytxt").value;
-    document.getElementById("demo").innerHTML = x;
-}
+    const inputValue = inputRedeemEl.value;
+
+    redeemCode = redeemCode.slice(0, redeemCode.length - 1);
+
+    if(inputValue === redeemCode) {
+
+        highScore++;
+
+        scoreEl.textContent = highScore;
+        
+    }
+    
+    init()
+})

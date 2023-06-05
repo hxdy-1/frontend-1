@@ -1,0 +1,254 @@
+.main {
+    height: 100%;
+}
+
+.welcome_heading {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.bold_styling {
+    font-family: var(--ff-thick);
+    font-weight: var(--fw-semibold);
+}
+
+.semibold_poppins_styling {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semibold);
+}
+
+.logout_message {
+    padding: 0 1em;
+    font-size: small;
+    font-weight: var(--fw-light);
+    margin-left: auto;
+    width: fit-content;
+    opacity: 0;
+}
+
+.user_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user_login>* {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.input_login {
+    border: var(--border1);
+}
+
+.right_arrow {
+    cursor: pointer;
+    border: none;
+    font-size: larger;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: 2.2rem;
+    transition: var(--transition-2);
+}
+
+.container>* {
+    height: 100%;
+}
+
+.container_left {
+    width: var(--container-left-width);
+    overflow-y: auto;
+    box-shadow: var(--shadow-1);
+    padding: .3rem;
+    user-select: none;
+}
+
+.instrument {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.stock_info_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stock_name {
+    flex-basis: 10rem;
+    font-weight: var(--fw-bold);
+}
+
+.instrument--profit {
+    background-image: linear-gradient(var(--linear-gradient-direction), #E2F4B0, #ACD242);
+}
+
+.instrument--loss {
+    background-image: linear-gradient(var(--linear-gradient-direction), #efc5b9, #ea8685);
+}
+
+.container_right {
+    width: calc(100% - var(--container-left-width));
+}
+
+.container_right>* {
+    width: 100%;
+}
+
+.profile_information_cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile_styling {
+    padding: var(--padding1);
+    font-size: x-large;
+}
+
+.profile_curr_value {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.curr_date {
+    display: inline-block;
+    font-size: small;
+    margin: 5px 5px 0;
+    font-style: italic;
+}
+
+.transactions_cont {
+    padding: 2.5em var(--padding1);
+}
+
+.transactions {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+}
+
+.transactions_styling {
+    border: var(--border2);
+    border-radius: var(--border-rad1);
+}
+
+.transactions>* {
+    padding: var(--padding1);
+    border-right: var(--border2);
+}
+
+.transaction {
+    height: 100%;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction>* {
+    padding: 1em;
+}
+
+.transaction_type {
+    padding: 0 1rem;
+    border-radius: var(--border-rad1);
+    text-transform: uppercase;
+    font-weight: var(--fw-semibold);
+}
+
+.transaction_type--sold {
+    background-image: linear-gradient(var(--linear-gradient-direction), #ff7675, #eb2f06);
+}
+
+.transaction_type--bought {
+    background-image: linear-gradient(var(--linear-gradient-direction), #44f2c1, #079992);
+}
+
+.transactions_action_cont {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transactions_action_cont>* {
+    background-image: linear-gradient(var(--linear-gradient-direction), #b0bae1, #dcdde1);
+    font-weight: var(--fw-semibold);
+}
+
+.user_actions_cont {
+    display: flex;
+    padding: 0 10px 2px;
+    gap: 5px;
+    margin: 0 0 1rem;
+}
+
+.user_actions_cont>* {
+    height: 100%;
+    width: 100%;
+    border: var(--border1);
+    padding: 10px;
+    border-radius: var(--border-rad1);
+}
+
+.gift_stocks_cont {
+    background-image: linear-gradient(var(--linear-gradient-direction), #FFE758, #F8EFBA)
+}
+
+.delete_acc_cont {
+    background-image: linear-gradient(var(--linear-gradient-direction), #df755c, #ea8685);
+}
+
+.switch_acc_cont {
+    background-image: linear-gradient(var(--linear-gradient-direction), #b5b7bb, #9ea8bd);
+}
+
+.user_action {
+    position: relative;
+}
+
+.user_action>* {
+    display: inline-block;
+    margin: 6px 0;
+}
+
+.user_action .right_arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.user_action_label {
+    font-weight: 600;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_visible {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

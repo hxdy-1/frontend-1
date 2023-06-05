@@ -1,0 +1,12 @@
+find, findIndex
+
+The callback we pass to find, findIndex should return boolean.
+
+find => returns an element of the array that satisfies the condition.
+
+if the condition is not satisfied, find returns "undefined".
+
+
+findIndex => returns the index of an element of the array that satisfies the condition.
+
+if the condition is not satisfied, find returns "-1".

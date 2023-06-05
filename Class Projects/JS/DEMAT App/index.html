@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DEMAT App</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="bold_styling | welcome_heading">To continue investing with your DEMAT account, login..</h2>
+        <div class="color_light-100 | logout_message">Logging you out in <span id="timer">20:00</span></div>
+    </header>
+    <main class="flex-center | main">
+        <section class="section_login">
+            <form id="login_form">
+                <div class="user_login">
+                    <input class="input | input_login" id="input_login--name" type="text" placeholder="name code">
+                    <input class="input | input_login" id="input_login--password" type="text" placeholder="password">
+                    <button type="submit" class="btn | right_arrow">&rarr;</button>
+                </div>
+            </form>
+        </section>
+        <section class="container | display_none">
+            <div class="color_dark-900 | container_left">
+                <ul class="instruments_cont">
+                    <li class="instrument | instrument--loss">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">HDFC Bank</span>
+                            <span class="stock_p&l_ratio">-0.09</span>
+                            <span class="stock_price">2500.45</span>
+                        </div>
+                    </li>
+                    <li class="instrument | instrument--profit">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">RELIANCE</span>
+                            <span class="stock_p&l_ratio">+0.19</span>
+                            <span class="stock_price">2900.45</span>
+                        </div>
+                    </li>
+                    <li class="instrument | instrument--loss">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">HDFC Bank</span>
+                            <span class="stock_p&l_ratio">-0.09</span>
+                            <span class="stock_price">2500.45</span>
+                        </div>
+                    </li>
+                    <li class="instrument | instrument--profit">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">RELIANCE</span>
+                            <span class="stock_p&l_ratio">+0.19</span>
+                            <span class="stock_price">2900.45</span>
+                        </div>
+                    </li>
+                    <li class="instrument | instrument--loss">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">HDFC Bank</span>
+                            <span class="stock_p&l_ratio">-0.09</span>
+                            <span class="stock_price">2500.45</span>
+                        </div>
+                    </li>
+                    <li class="instrument | instrument--profit">
+                        <div class="stock_info_cont">
+                            <span class="stock_name">RELIANCE</span>
+                            <span class="stock_p&l_ratio">+0.19</span>
+                            <span class="stock_price">2900.45</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container_right">
+                <div class="profile_styling | profile_information_cont">
+                    <span class="bold_styling | profile_curr_value">Current value: <span
+                            class="semibold_poppins_styling" id="curr_val">2500&#8377;</span></span>
+                    <span class="bold_styling | profile_invested_value">Invested: <span class="semibold_poppins_styling"
+                            id="invested_val">2400&#8377;</span></span>
+                    <span class="curr_date">(as of <span id="date_msg">5th September 2022, 15:31</span>)</span>
+                </div>
+                <div class="transactions_cont">
+                    <ul class="transactions | transactions_styling">
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--bought">Bought</span>
+                            <span class="color_light-100">RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--sold">Sold</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--bought">Bought</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--sold">Sold</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--bought">Bought</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--sold">Sold</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--bought">Bought</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                        <li class="transaction">
+                            <span class="transaction_type | transaction_type--sold">Sold</span>
+                            <span>RELIANCE</span>
+                            <span>03-09-2022</span>
+                            <span>2000&#8377;</span>
+                        </li>
+                    </ul>
+                    <div class="transactions_action_cont">
+                        <button class="btn btn_bought">Bought</button>
+                        <button class="btn btn_sold">Sold</button>
+                        <button class="btn btn_sort">Sort</button>
+                    </div>
+                </div>
+                <div class="user_actions_cont | color_dark-900">
+                    <div class="gift_stocks_cont">
+                        <form class="user_action" id="user_action--gift">
+                            <label class="user_action_label">Gift a stock</label>
+                            <br>
+                            <input class="input gift_action" id="gift_action--name" type="text"
+                                placeholder="Enter name code">
+                            <input class="input gift_action" id="gift_action--stock" type="text"
+                                placeholder="Enter the stock">
+                            <button type="submit" class="btn | right_arrow">&rarr;</button>
+                        </form>
+                    </div>
+                    <div class="delete_acc_cont">
+                        <form class="user_action" id="user_action--delete">
+                            <label class="user_action_label">Delete your account</label>
+                            <br>
+                            <input class="input | delete_action" id="delete_action--name" type="text"
+                                placeholder="Confirm your code">
+                            <input class="input | delete_action" id="delete_action--password" type="password"
+                                placeholder="Confirm password" maxlength="6"> <!-- LEARN: maxLength="" -->
+                            <button type="submit" class="btn | right_arrow">&rarr;</button>
+                        </form>
+                    </div>
+                    <div class="switch_acc_cont">
+                        <form class="user_action" id="user_action--switch">
+                            <label class="user_action_label">Switch to another account</label>
+                            <br>
+                            <input class="input switch_action" id="switch_action--name" type="text"
+                                placeholder="Enter name code">
+                            <input class="input switch_action" id="switch_action--password" type="text"
+                                placeholder="Enter password" maxlength="6">
+                            <button type="submit" class="btn | right_arrow">&rarr;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        // document.getElementById('login_form').addEventListener('submit', e => {
+        //     e.preventDefault();
+        //     document.querySelector('.section_login').classList.add('display_none');
+        //     document.querySelector('.container').classList.remove('display_none');
+        //     document.querySelector('.container').classList.add('display_visible');
+        //     document.querySelector('.logout_message').style.opacity = '1';
+
+        //     document.querySelector('.welcome_heading').textContent = `Greetings, Pravin.`;
+        // })
+    </script>
+</body>
+
+</html>

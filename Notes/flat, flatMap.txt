@@ -1,0 +1,14 @@
+flat, flatMap
+
+flat => used to flat 2D arrays to 1D array.
+
+flat takes depth argument to flat the arrays greater than 2D.
+
+arr.flat(3) = where 3 is used to flat 3D array to 1D array.
+
+flat is not a HOF.
+
+
+flatMap => it is a combination of map and flat.
+
+it can only flat 2D array.

@@ -1,0 +1,6 @@
+min width: trigers something starting after it. greater than or equal to
+max width: trigers something upto it. less than or equal to
+
+min-width: 500px (starting from 500px)
+max-width: 500px (upto 500px)
+

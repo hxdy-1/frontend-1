@@ -1,0 +1,221 @@
+Advanced DOM
+
+A} Selecting DOM elements:
+
+document.documentElement
+
+1. document.querySelector(".classname")
+
+selects the 1st node from the document having class "classname".
+
+2. document.querySelectorAll(".classname")
+
+selects all node from the document having class "classname".
+
+3. document.querySelector(".parentclass").querySelector(".childclass")
+
+selects the first element having class "childclass" inside the "parentclass" element.
+
+4. document.querySelector(".parentclass").querySelectorAll("*")
+
+selects all the elements inside the parent class.
+
+{NodeList is an array-like collection of node objects. NodeList doesnt gets updated as the DOM is changing. .forEach and .length can be used on it}
+
+5. document.getElementByTagName("section");
+
+selects all the section tags. returns HTMLCollection/LiveCollection which updates along with DOM updates. We cant use .forEach on it but can use .length
+
+6. document.getElementById("ID")
+
+selects the element having id "ID".
+
+7. document.body
+
+selects the whole body.
+
+8. document.head
+
+selects the whole head.
+
+
+B} Creatinging and Inserting elements:
+
+document.createElement("div")
+
+creates a div.
+
+
+.prepend():
+
+insert an element as a first child of the parent element.
+
+
+.append():
+
+insert an element as a last child of the parent element.
+
+
+"Each DOM element is unique in the whole DOM tree."
+
+if we prepend an element then append the same element, it gets appended and vice versa.
+
+to avoid this, we use .clonenode(true)
+
+main.append(cookieEl.cloneNode(true));
+
+
+.before():
+
+insert an element just before the targeted element.
+
+
+.after():
+
+insert an element just after the targeted element.
+
+
+C} Deleting an element
+
+.remove():
+
+is used to remove an element from the DOM.
+
+
+D} Styling an element
+
+1. cookieEl.style.backgroundColor = "yellow";
+
+2. console.log(getComputedStyle(cookieEl).padding);
+
+it is used to read the specific style of the given DOM element even if we havent mentioned it in the CSS file.
+
+3. document.documentElement.style.setProperty("--cookie-bg", "green");
+
+setProperty() is used to set CSS variables.
+
+4. Standard vs Non-Standard attributes:
+
+Standard attributes: class, id, type, href, alt, etc.
+
+to read the value of an standard attribute:
+
+console.log(imgEl.src);
+
+it always reads the value in absolute form.
+
+Non-Standard attributes:
+
+if we log the value of Non-Standard attributes, it returns "undefined".
+
+to read the Non-Standard attributes:
+
+console.log(pEl.getAttribut("mycontent"))
+
+.getAttribute(): returns the relative value of the standand attributes.
+
+E} Data attributes
+
+Data attributes are special attributes that are used to store data in the UI itself. They start with data-"any name"
+
+To access a data attribute, we use "dataset".
+
+first select the tag containing the data attribute, then:
+
+document.querySelector(".something").dataset.mySpecialAttribute;
+
+this is how we read the data attribute.
+
+F} getBoundingClientRect():
+
+this method is used to get the coordinates of an element realtive to the viewport.
+
+console.log(secondImgEl.getBoundingClient().top/bottom/left/right)
+
+
+G} Smooth scrolling:
+
+anyEL.scrollIntoView({ behavior: "smooth" }):
+
+to achieve smooth scroll effect, we have to add click event on the element which redirects to the given element, then on that element we have to use .scrollIntoView({ behavior: "smooth" })
+
+
+H} DOM travarsing: the process of moving up and down in the DOM tree i.e. selecting an element based on another element.
+
+~ Downward traversing
+
+1. listContEl.firstChild: used to select first child of the parent.
+
+2. listContEl.lastChild: used to select last child of the parent.
+
+
+~ Upwardward traversing
+
+1. thirdListEl.paresntElement: used to select parent of the given element.
+
+
+2. closest(): it helps us to select an ancestor of an element.
+
+it takes string as an argument which should be an CSS selector.
+
+if no element matches for the closest, it returns "null".
+
+~ Sideways traversing
+
+we can only select direct siblings of an element.
+
+1. thirdListEl.previousElementSbling: selects the direct sibling of the element just before the given element.
+
+2. thirdListEl.previousElementSbling: selects the direct sibling of the element just after the given element.
+
+
+I} Events
+
+1. Mouse event (mouseenter, mouseleave and mouseover, mouseout):
+
+mouseover: events gets triggerd when we hover over the element and it's child.
+
+mouseenter: events gets triggerd when we hover over the element.
+
+{ once: true }: this object is passed as third argument to the event handler to only execute the function once when the event is triggered.
+
+
+J} Types of events: 
+
+JS events have special properties which are capturing and bubbling phases.
+
+In case of event bubbling, the event moves out of the DOM tree i.e. moves up thorough the hierarchy (like a bubble)
+
+In case of event capturing, the event trickles-down/captured the DOM tree.
+
+An event trickles-down/captured and then bubbles up.
+
+This concept is also called "Event Propagation".
+
+By default events are listened to bubbling phases.
+
+e.target: returns the DOM node on which the event actually occured.
+
+e.currentTarget: returns the DOM element on which the event happen.
+
+e.stopPropagation(): stops the whole propagation when gets called.
+
+if we give "true" as third argument to the eventListner, the capturing phase is listned.
+
+
+K} Event Delegation:
+
+It's a technique to better handle the events. Its based on the concept of event bubbling.
+
+Two steps of event delegation process:
+
+1. Add an event listner to a common parent.
+
+2. Determine the child from which the event originated.
+
+
+L} BOM: (Browser Object Model) allows access and manipulation of the browser window(using BOM, we can move the window, change the text in the address bar)
+
+
+
+

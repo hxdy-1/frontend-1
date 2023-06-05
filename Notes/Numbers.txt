@@ -1,0 +1,100 @@
+Numbers
+
+Parsing: reading a number value out of a string.
+
+1. parseInt(str):
+
+Reads only the Integer number from a string.
+
+2. parseFloat(str):
+
+Reads the floating numbers from a string and can also read integers if the string have integer numbers.
+
+note: to use parsing on any string, the string must start with a number.
+
+3. isNan(value):
+
+checks if the value is Nan(not a number).
+
+isNan fails to provide proper information when the value is infinity,
+it gives false when the value is infinity.
+
+4. isFinite(value):
+
+checks if the value is finite or not.
+
+if the value is Nan, it gives false.
+
+if the value is infinity it gives false.
+
+true = it is a number
+false = Nan
+
+5. Number.MAX_SAFE_INTEGER
+
+	9007199254740991
+
+to go beyond the max safe integer, BigInt() is used.
+
+Math object: It is a built-in object which has properties and methods for mathematical constants and functions:
+
+1. Math.random():
+
+returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1
+
+2. Math.PI:
+gives actual value of pi.
+
+3. Math.sqrt()
+gives square root of the value.
+
+4. Math.max():
+takes multiple values and returns the greatest number.
+
+5. Math.min():
+takes multiple values and returns the smallest number.
+
+6. Math.abs():
+returns the absolute value (positive value).
+
+Rounding methods:
+
+A) Rounding floating numbers to the integers:
+
+1. Math.trunc():
+returns numbers before the points.
+
+2. Math.round():
+rounds the value to the nearest integer.
+
+3. Math.ceil():
+rounds up the value to the nearest integer.
+
+4. Math.floor():
+rounds down the value to the nearest ineteger.
+
+B) Rounding floating numbers to the floating numbers:
+
+1. toFixed():
+
+it is not a method of Math object.
+
+syntax: value.toFixed()
+
+it takes an argument(number) and rounds the floating numbers equal to the argument.
+
+Ex: 
+
+const value = 23.53
+
+console.log(value.toFixed(0)) => 24
+console.log(value.toFixed(1)) => 23.5
+console.log(value.toFixed(2)) => 23.53
+console.log(value.toFixed(3)) => 23.530
+
+const value1 = 23.46
+
+console.log(value.toFixed(0)) => 23
+console.log(value.toFixed(1)) => 23.4
+console.log(value.toFixed(2)) => 23.46
+console.log(value.toFixed(3)) => 23.460

@@ -1,0 +1,23 @@
+for margin auto to work width must be less than 100%.
+
+when two margins are stacked one above another it leads to margin collaps and the larger value gets applied.
+
+to avoid margin collapse, border is used.
+
+only top and bottom margins gets collapsed, not the right and left.
+
+top and bottom margins doesn't works on inline elements. <span> etc.
+
+by default content box is applied on 
+
+This is the reason why padding and the border gets added on
+top of the element •s dimension, leading to an increase in
+element's size.
+
+box sizing property allows us to avoid overflow. 
+
+content-box : added next to content box.
+
+border-box : added into the content box. until padding is less than half of the width of content box.
+
+box sizing works on border and 

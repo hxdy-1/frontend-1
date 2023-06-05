@@ -1,0 +1,19 @@
+transition timing function: decides the timing curve
+ease starts slow then fast then slow
+
+shorthand for transition :- t-property t-duration t-delay t-function 
+
+css positioning is used to manipulate the position of an element 
+
+position relative: element will be in the flow of document
+
+position absolute: 
+
+inset is shorthand for TRBL. 
+
+position fixed: makes the element fixed on veiwport. and floats on screen while scrolling. its parent is always the body
+
+absolute works according to the 1st non static ancestor of it.
+
+z-index also required a non static positioning parent.
+

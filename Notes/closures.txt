@@ -1,0 +1,3 @@
+closures
+
+closure means that a function bundled together with it's lexical environment. More specifically, the reference to the parent's lexical environment. Whenever an inner function is returned, a CLOSURE ENCLOSED inner function (along with it's lexical environment) is returned.
