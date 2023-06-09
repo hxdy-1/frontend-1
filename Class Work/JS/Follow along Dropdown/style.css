@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(rgb(200, 0, 0), rgb(145, 0, 0), rgb(42, 42, 42));
+    color: white;
+    padding: 3em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.navbar_container {
+    width: 60%;
+    margin: auto;
+}
+
+.dropdown_background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    background-color: black;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1;
+
+    transition: all 400ms cubic-bezier(.6, -0.28, .74, .05);
+    transition: all 350ms, opacity 100ms, transform 250ms;
+}
+
+.dropdown_background::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 50%;
+
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid black;
+    transform: translateX(-50%);
+}
+
+.dropdown_background.removeOpacity {
+    opacity: 1;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    /* gap: 1rem; */
+
+    width: 100%;
+}
+
+.trigger {
+    position: relative;
+    /* To increase the surface area of hover: */
+    padding: 0 1em 1em 0;
+
+    border-radius: 5px;
+}
+
+.trigger_title {
+    display: block;
+    padding: .7em 1.5em;
+    background-color: rgb(41, 39, 39);
+}
+
+.dropdown_container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .5em;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+    display: none;
+    opacity: 0;
+
+    transform: translateX(-50%);
+    transition: opacity 500ms;
+}
+
+.dropdown_container.hovered {
+    display: flex;
+}
+
+.dropdown_container.visible {
+    opacity: 1;
+}
+
+.about {
+    text-align: center;
+    min-width: 40rem;
+}
+
+.projects {
+    min-width: 25rem;
+}
+
+.projects_title {
+    display: inline-block;
+    width: 9rem;
+}
+
+.socials {
+    min-width: 10rem;
+}
+
+.child_ul {
+    width: 100%;
+}
+
+.child_ul>li {
+    width: 100%;
+}
