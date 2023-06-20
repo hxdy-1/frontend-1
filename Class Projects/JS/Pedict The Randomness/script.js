@@ -1,3 +1,5 @@
+"use strict"
+
 const btn_cmnEl = document.querySelectorAll(".btn_cmn");
 
 const ans_boxEl = document.querySelector(".ans_box");
@@ -10,39 +12,43 @@ const scoreEl = document.getElementById("score");
 
 const restartBtnEl = document.querySelector(".restart_btn");
 
-const inputRedeemEl = document.querySelector(".input_redeem")
+const inputRedeemEl = document.querySelector(".input_redeem");
 
-const generateRandomNum = (min, max) => Math.trunc(Math.random(max - min) * max) + 1;
+const generateRandomNum = (min, max) => Math.trunc(Math.random() * (max - min) + min) + 1;
 
 // application data:
 
 const winCount = 2;
-let attemptsRemaining = 30, correctGuesses = 0, gameOver = false, highScore = 0, redeemCode = "";
+let attemptsRemaining = 50,
+    correctGuesses = 0,
+    gameOver = false,
+    highScore = 0,
+    redeemCode = "";
 
 function init() {
-    inputRedeemEl.value = "";
+    inputRedeemEl.value = redeemCode = "";
 
     correctGuesses = 0;
 
-    attemptsRemaining = 30;
+    attemptsRemaining = 50;
     attemptsEl.textContent = attemptsRemaining;
 
-    ans_boxEl.textContent = "?";
     infoEl.textContent = "Start the game by clicking a no...";
+    ans_boxEl.textContent = "?";
 
     gameOver = false;
-    ans_boxEl.style.backgroundImage = "linear-gradient(to bottom right, rgb(38, 43, 51), rgb(117, 105, 115),rgb(198, 109, 77))"
-    ans_boxEl.style.backgroundColor = ""
-    ans_boxEl.style.color = "white"
+    ans_boxEl.style.backgroundImage =
+        "linear-gradient(to bottom right, rgb(38, 43, 51), rgb(117, 105, 115),rgb(198, 109, 77))";
+    ans_boxEl.style.backgroundColor = "";
+    ans_boxEl.style.color = "white";
     inputRedeemEl.style.opacity = "0";
 }
 
-init()
+init();
 
 for (let i = 0; i < btn_cmnEl.length; i++) {
     btn_cmnEl[i].addEventListener("click", () => {
-
-        if (gameOver) return
+        if (gameOver) return;
 
         attemptsRemaining--;
         attemptsEl.textContent = attemptsRemaining;
@@ -50,20 +56,18 @@ for (let i = 0; i < btn_cmnEl.length; i++) {
         if (attemptsRemaining === 0) {
             gameOver = true;
             infoEl.textContent = "Out of attempts, restart the game.";
-            ans_boxEl.style.backgroundImage = "none"
-            ans_boxEl.style.backgroundColor = "rgba(255, 0, 0, .5)"
-            ans_boxEl.style.color = "black"
+            ans_boxEl.style.backgroundImage = "none";
+            ans_boxEl.style.backgroundColor = "rgba(255, 0, 0, .5)";
+            ans_boxEl.style.color = "black";
             return;
         }
 
-        ans_boxEl.textContent = generateRandomNum(1, 10)
-        // console.log(`${ans_boxEl.textContent} generated randomly`);
+        ans_boxEl.textContent = generateRandomNum(0, 10);
 
         const btnClicked = btn_cmnEl[i].textContent;
-        // console.log(`when ${btnClicked} was clicked`);
 
         if (ans_boxEl.textContent === btnClicked) {
-            infoEl.textContent = "Correct prediction :)"
+            infoEl.textContent = "Correct prediction :)";
             correctGuesses++;
 
             redeemCode += btnClicked + ",";
@@ -76,7 +80,7 @@ for (let i = 0; i < btn_cmnEl.length; i++) {
                 ans_boxEl.style.color = "black";
                 setTimeout(() => {
                     ans_boxEl.textContent = "?";
-                }, 650)
+                }, 650);
                 inputRedeemEl.style.opacity = "1";
 
                 if (attemptsRemaining > highScore) {
@@ -87,22 +91,19 @@ for (let i = 0; i < btn_cmnEl.length; i++) {
         } else {
             infoEl.textContent = "Wrong Prediction :(";
         }
-    })
+    });
 }
 
 restartBtnEl.addEventListener("click", () => {
-
     const inputValue = inputRedeemEl.value;
 
     redeemCode = redeemCode.slice(0, redeemCode.length - 1);
 
-    if(inputValue === redeemCode) {
-
+    if (inputValue === redeemCode) {
         highScore++;
 
         scoreEl.textContent = highScore;
-        
     }
-    
-    init()
-})
+
+    init();
+});
