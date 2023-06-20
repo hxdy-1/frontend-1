@@ -1,0 +1,73 @@
+Async JS
+
+Synchronous code is executed line by line, in the exact order of execution that we defined in our code. Each line of code waits for the previous line to complete.
+
+JS is Synchronous, single-threaded language
+
+Blocking of the main thread.
+
+Asynchronous means not occurring at the same time.
+
+Asynchronous code is executed only after a task that runs in the background completes its execution. Its always non-blocking.
+
+Example of async code: setTimeout's callback, geolocation API, AJAX calls (HTTP request), setting the src attribute, etc.
+
+setting the src attribute in JS is implemented in an Asynchronous way.
+
+load event
+
+AJAX (Asynchronous JavaScript and XML)
+
+AJAX call allows us to cummunicate with remote web servers in an Asynchronous way. With AJAX calls, we can request data from the web servers dynamically.
+
+*Request-Response model:
+
+Client(JS application running in the browser) => AJAX call (HTTP request).
+
+Server(that serves the data) => Returns response that contains the data.
+
+This RR model happens in the background Asynchronously. 
+
+XML(Extended Markup Language) => Data format used to transmit data across the web.
+
+JSON(JavaScript Object Notation) => JS objects converted into string.
+
+{
+    "something": value
+}
+
+Geolocation API is a browser API that is used to get the coordinates of the current position of the user.
+
+const succcessCallback = (position) => {
+    console.log("successful")
+    console.log(position)
+}
+
+const failureCallback = () => {
+    alert("failed")
+}
+
+navigator.geolocation.getCurrentPostion(succcessCallback, failureCallback)
+
+
+Callbacks with Async JS:
+
+Pros of callbacks:
+
+give access to the Asynchronous execution
+
+Cons of callbacks:
+
+1. Callback hell: when we have a lot of nested callbacks in order to execute Asynchronous tasks in sequence.
+
+*To escape the callback hell, Promises were inroduced in ES6. 
+
+*API endpoint is just another name for URL
+
+2. Inversion of control: when we lost the control of the code.
+
+order of response in parllel request may not be same as the order in which we sent all those requests.
+
+// A characteristic of parallel request is that the order in which the response arrives wont be the same as the order in which the requests were made.
+
+

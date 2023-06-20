@@ -1,0 +1,22 @@
+Asynchronous working BTS
+ 
+when callstack is empty after all the synchronous code is executed, event loop pushes callbacks from queue to callstack. 
+
+Concurrency model: means how a language multiple things at the same time (multitasking).
+
+Anything that's inside the call stack is synchronously executed. Its not possible to execute code that runs after some delay (asynchronous) by JS itself.
+
+Asynchronous tasks occurs in web API environment.
+
+Event Loop: it tracks callstack and callback queue.
+
+event loop tick : each time the event loop takes a callback from the callback queue we say there was an event loop tick. 
+
+callbacks from Promises are called *Micro-tasks and micro tasks are not pushed into the callback queue, instead they're pushed into to *Micro-task queue.
+
+At the end of an event loop tick the micro tasks are given a priority over the callbacks from the callback queue.
+
+Trust issues with setTimeOut()
+
+setTimeOut only guaranties that the code inside it wont get executed before the time set.
+

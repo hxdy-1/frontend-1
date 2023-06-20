@@ -47,5 +47,5 @@ carouselEl.addEventListener("click", (e) => {
   const newLeftExtreme = document.createElement("div");
   newLeftExtreme.classList.add("slide", "left_extreme");
   newLeftExtreme.innerHTML = rightExtremeData;
-  carouselEl.append(newLeftExtreme);
+  carouselEl.prepend(newLeftExtreme);
 });

@@ -1,0 +1,166 @@
+OOP
+
+OOP is the most popular and widely used programming paradigm.
+
+Alternative of OOP in JS is ES6 modules (functional programming).
+
+Paradigm: style of writing and organizing code.
+
+Object contains data (properties) and behavior (methods).
+
+Objects interact through public interface (API) i.e. methods.
+
+API is the way 2 software communicate with each other.
+
+JS Objects are loose collection of data
+
+Programmatically generated objects: The objects that are in OOP
+
+"this" is automatically set in PGO
+
+We use classes to generate objects programmatically.
+
+classes are blue print of the objects.
+
+classes are abstract plan of the objects.
+
+classes doesnt occupy memory and objects does.
+
+Instance: Instances are the objects that are created out of a class. The purpose of creating an instance is that we can create multiple instances using the samoe class, with each one of them having customized additional features.
+
+JS doesnt have real Classes. The syntax in JS is just syntactic sugar over the traditional constructor functions (CFUN).
+
+4 priciples to make classes: Abstraction, Inheritance*, Polymorphisim, Encapsulation.
+
+*OOPs in JS: In JS we have something called prototype and all the objects (including instances) in JS are linked to a prototype object.
+
+*Also, we can say that each object has a prototype (it isnt the prototype) which is represented by __proto__.
+
+*Only functions can have a "prototype" property.
+
+Traditional inheritance: Child class inherits from a parent class.
+
+*Prototypal inheritance: Instance inherits behavior from a prototype.
+
+3 ways to create prototypes and linking objects to some prototype, etc:
+
+1. Constructor functions(CFUN)
+
+2. ES6 Classes
+
+3. Object.create()
+
+CFUN are used to build instances using a function. The only difference between a regular function and a CFUN is tha we invoke a CFUN using the "new" operator.
+
+we can use function declaration as well as function expression to create a CFUN but not arrow functions as they dont get their "this" keyword.
+
+we follow a convention to make CFUN that is start its name with capital letter.
+
+
+*When we invoke a CFUN using the new operator, 4 steps happen internaly.
+
+1. An empty object is created.
+
+2. The CFUN is invoked and the 'this' keyword is set to the newly created object.
+
+3. The newly created object is linked to the prototype of CFUN.
+
+4. The newly created is returned from the CFUN. And we can refere to this newly created object as an "instance."
+
+
+const Person = function(firstName, age) {
+    console.log("Person invoked")
+
+    this.firstName = firstName;
+    this.age = age;
+
+    // Bad practice of creating behaviors:
+    this.calcBirthYear = function() {
+        console.log(2023 - age)
+    }
+};
+
+const piyush = new Person("Piyush", 22);
+console.log(piyush)
+
+const anurag = new Person("Anurag", 22);
+console.log(anurag)
+
+const random = {
+    firstName: "Random",
+    age: 30,
+}
+
+// Proper way of creating behaviors:
+Person.prototype.calcBirthYear = function (age) {
+    console.log(2023 - this.age)
+}
+
+console.log(piyush instanceOf Person) => True
+console.log(random instanceOf Person) => False
+
+Each and every function (including CFUN) gets a prototye property.
+
+Every object (instance) that is created by a certain CFUN will get access to all methods and properties defined in the CFUN's prototype property.
+
+__proto__ is same as [[Prototype]]
+
+*Prototype Chain: The fact that an instance is connected to a prototype and the ability to look up the methods and properties in that prototye is called Prototype chain.
+
+
+ES6 Classes: 
+
+Each class should have a cunstructor method (CFUN)
+
+class className {
+    // class declaration
+}
+
+const className = class {
+    // class expression
+}
+
+ex: 
+
+class Person {
+    constructor() {
+        this.newProperty = 20;
+
+        // Bad practice to create a behavior
+        this.something = function() {
+
+        }
+    }
+
+    // Good practice to create a behavior
+    calcBirthYear() {
+        console.log(2023 - this.age)
+    }
+
+}
+
+const piyush = new Person("Piyush", 20)
+
+console.log(piyush)
+
+*All the methods that we create in a class out side of the constructor will be created on the prototye property of the class.
+
+How to make methods of a class chainable? => return "this"
+
+
+Object.create(): 
+
+it manually sets the prototype of an object to any other object, as we want.
+
+const PersonProto = {
+    calcBirthYear() {
+        console.log(2023 - this.age)
+        console.log("Inherited method")
+    }
+}
+
+const piyush = Object.create(PersonProto)
+piyush.calcBirthYear()
+
+
+

@@ -1,0 +1,108 @@
+Promises
+
+Intro:
+
+Promises are the modern way of making AJAX calls and hadling the response is through the Fetch API, which is again a part of the Browser API.
+
+Promise is an object that acts as a placeholder for the future value, of an asynchronous operation. OR... its a container for the future value.
+
+Since Promises works with asynchronous operations... they are time sensitve (they change overtime)
+
+
+Lifecycle of Promise:
+
+pendig > settled (fullfiled, rejected) > 
+
+At the very beginig, the Promise is in Pending state.
+Pending state is when the async task is still running in the background and the future value is still not available.
+
+When the async task completes, the Promise is setteled.
+There are 2 different types of Setteled Promise: Fullfiled and Rejected
+
+A fulfilled promise is when a promise is successfully resulted into a value.
+A rejected promise is when an error occured during the async task.
+
+A Promise can only be one state at a time.
+Promises can only be settled once, hence the setteled Promises are Immutable.
+
+We are able to handle different states of the Promise in order to do something as a result of either a successful or a failed promise. This is called *Consuming the promise.
+
+
+Consuming the Promises: (managing the states of a Promise)
+
+then() method is used to handle fulfilled promise and its available on all the promise objects.
+
+then() always returns a promise. If we return something from the then() method's callback, then that value will become the fulfillment value of the returned value.
+
+Chaining the promises (sub part of Consuming):
+
+the value we get after a promise gets fullfiled, that value is called fullfilment value of that promise.
+
+The returned value from the previous then() is recieved as an argument with the callback of the next then() method... as a fulfilled value.
+
+then() method ensures to invoke the callback only once. 
+
+flat chain of promises. 
+
+A Promise in which an error happens is called a rejected promise.
+
+T only way fetch() promise rejects is when the user loses the internet connection. 
+
+*Handling Errors with promises: (cathing the errors)
+
+handling the rejected Promises.
+
+*catch() method: is used to catch the errors.
+
+the callback of catch() recieves an argument which is the *Error Object.
+
+error.message gives an error message.
+
+We can handle all the errors, no matter where they appear in the chain, at the end by attaching a catch() method.
+
+Errors propogate down the chain, until they are caught.
+
+Just like then(), catch() also returns a Promise. 
+
+*finally() method: it is attached in the last, after the catch() method, it also takes function as a callback which returns a promise. 
+
+error 400 - bad request.
+
+Fetch API doesnt treat error status code as real errors. Hence it doesnt reject the promise. Which is why our catch handlers cant pick the right error.
+
+throw new Error("")
+
+*More About Promises:
+
+Building a Promise:
+
+Promisification/Promisifiying: is a process to convert a callback based async behavior into Promise-based async task.
+
+new Promise()
+
+it demands an executor function.
+
+new Promise((resolve, reject) => {})
+
+executor function recieves 2 parameters resolve and reject
+
+The executor function must conatain the async behavior that we are trying to handle with the promise.
+
+
+new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (Math.random <= .5) {
+            resolve()
+        } else {
+            reject()
+        }
+    })
+})
+
+
+In order to set promise to fulfilled, we invoke the resolve function.
+
+To mark the promise rejected, we invoke the rejected function. 
+
+
+

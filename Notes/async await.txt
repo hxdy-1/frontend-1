@@ -1,0 +1,46 @@
+Async Await
+
+they were released in ES8 to better consume the Promise
+
+they're syntactic sugar.
+
+Async funtion keeps running in the background while executing the code inside of it. Once the function is done with its execution, it returns a Promise.
+
+We can use the await keyword to await the result of a Promise.
+
+await makes the async task to wait until it returns a result.
+
+as soon as the promise is resolved, the value of the entire await expression will be the resolved value of the promise... that can be stored in a variable.
+
+Error handling in async-await using try catch.
+
+in the try block, we can try executing a risky code from which error can be arised. If an error occurs, the catch block will have access to the error that occurred in the try block.
+
+*Never work without try catch in an async function!
+
+*Async funtion always returns a Promise so if we try printing the returned value of an async funtion, it will give a pending promise.
+
+*The value that we return from an async functin, will become the fulfilled value of the promise that is returned from the async function.
+
+even if theres an error in the async function, the async function returns a fulfilled promise anyways.
+
+in case we want the async function to return a rejected promise, we have to re-throw the error manually.
+
+*Combinators:
+
+1. Promise.all(): it is used to run the promises in parallel.
+
+It takes an array of promises and return on new promise. We cane await this newly returned promise to get all the resolved values at once (in an array)
+
+even if one of the promise get rejected, the the entire Promise.all() gets rejected.
+
+It short circuits when any promise rejects.
+
+2. Promise.race():
+
+also takes in an array of promises and returns one promise. But, the promise returned by Promise.race() is settlled as soon as one of the input promise gets settled. 
+
+Promise.race() is used to prevent agianst a never ending Promise i.e. long running promise.
+
+
+

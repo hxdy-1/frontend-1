@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+#login_btn {
+    color: white;
+}
+
 .bold_styling {
     font-family: var(--ff-thick);
     font-weight: var(--fw-semibold);
